@@ -1,5 +1,6 @@
 # Multi-Agent Knowledge Workflow
 
+
 A compact knowledge system where specialised agents collaborate through LangGraph. Documents are ingested, embedded into a vector store and queried with conditional routing that can escalate low-confidence responses for human review.
 
 ## Setup
@@ -44,3 +45,4 @@ The workflow orchestrates four agents:
 - a summariser that condenses the context
 
 When similarity falls below a threshold, a placeholder response signals that a human should review the query.
+
