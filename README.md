@@ -1,9 +1,9 @@
 # Multi-Agent Knowledge Workflow
-
+## Langgraph and AI Agents
 
 ## Setup
 
-1. Create a virtual environment:
+1. Create a virtual environment and activate it:
 
 ```bash
 python -m venv .venv
