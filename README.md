@@ -1,6 +1,5 @@
 # Multi-Agent Knowledge Workflow
 
-A compact knowledge system where specialised agents collaborate through LangGraph. Documents are ingested, embedded into a vector store and queried with conditional routing that can escalate low-confidence responses for human review. Maintenance endpoints allow clearing and inspecting the knowledge base.
 
 ## Setup
 
@@ -33,8 +32,7 @@ uvicorn workflow.app:app
 
 - `POST /upload` – send a text file to extend the knowledge base.
 - `GET /query?question=` – retrieve an answer and summary. Responses with low confidence are marked for human attention.
-- `POST /reset` – remove all stored vectors.
-- `GET /stats` – inspect the number of indexed fragments.
+
 
 ## Architecture
 
@@ -46,3 +44,4 @@ The workflow orchestrates four agents:
 - a summariser that condenses the context
 
 When similarity falls below a threshold, a placeholder response signals that a human should review the query.
+

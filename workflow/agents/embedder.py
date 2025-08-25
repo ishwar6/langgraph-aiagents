@@ -19,7 +19,9 @@ class EmbeddingAgent:
         collection: str
             Name of the vector collection.
         """
+
         self.collection = collection
+
         self.embeddings = OpenAIEmbeddings()
         self.store = Chroma(collection_name=collection, embedding_function=self.embeddings)
 
@@ -49,6 +51,7 @@ class EmbeddingAgent:
             Matched documents paired with similarity scores.
         """
         return self.store.similarity_search_with_score(query, k=k)
+ 
 
     def clear(self) -> None:
         """Remove all stored vectors."""
@@ -58,3 +61,4 @@ class EmbeddingAgent:
     def count(self) -> int:
         """Return the number of stored vectors."""
         return self.store._collection.count()
+
