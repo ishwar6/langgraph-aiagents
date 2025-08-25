@@ -60,3 +60,16 @@ async def query(question: str):
         "summary": result.get("summary"),
         "needs_human": result.get("needs_human"),
     }
+
+
+@app.post("/reset")
+async def reset():
+    """Remove all persisted vectors."""
+    embedder.clear()
+    return {"status": "cleared"}
+
+@app.get("/stats")
+async def stats():
+    """Report the number of indexed fragments."""
+    return {"count": embedder.count()}
+

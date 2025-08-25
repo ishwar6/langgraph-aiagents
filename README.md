@@ -1,8 +1,6 @@
 # Multi-Agent Knowledge Workflow
 
 
-A compact knowledge system where specialised agents collaborate through LangGraph. Documents are ingested, embedded into a vector store and queried with conditional routing that can escalate low-confidence responses for human review.
-
 ## Setup
 
 1. Create a virtual environment:
@@ -34,6 +32,7 @@ uvicorn workflow.app:app
 
 - `POST /upload` – send a text file to extend the knowledge base.
 - `GET /query?question=` – retrieve an answer and summary. Responses with low confidence are marked for human attention.
+
 
 ## Architecture
 
