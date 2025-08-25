@@ -1,4 +1,4 @@
-"""FastAPI interface for the agent workflow."""
+
 from pathlib import Path
 import tempfile
 from fastapi import FastAPI, UploadFile, File
